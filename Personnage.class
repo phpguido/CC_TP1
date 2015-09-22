@@ -11,6 +11,11 @@ class Personnage
   const PERSONNAGE_TUE = 2;
   const PERSONNAGE_FRAPPE = 3;
 
+  public function __construct(array $donnees)
+  {
+    $this->hydrate($donnees);
+  }
+
   public function hydrate(array $donnees)
   {
     foreach ($donnees as $key => $value)
